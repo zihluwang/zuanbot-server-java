@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @since 22 Sept, 2023
  */
 @Data
-@ConfigurationProperties("app.cors")
+@ConfigurationProperties("application.cors")
 public class CorsProperties {
 
     private Boolean allowCredentials;

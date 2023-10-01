@@ -1,7 +1,7 @@
 FROM amazoncorretto:17.0.8
 
 WORKDIR /app
-COPY build/libs/zuanbot-server-java-0.0.1-SNAPSHOT.jar app.jar
+COPY build/libs/zuanbot-server-java-1.0.0.jar app.jar
 EXPOSE 8080
 ENV TZ Asia/Hong_Kong
 ENV SECRET ''
