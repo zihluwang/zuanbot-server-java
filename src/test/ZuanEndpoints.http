@@ -1,11 +1,11 @@
 ### 随便来一句
 GET /zuan/
-Host: 127.0.0.1:8080
+Host: {{host}}
 
 ### 随便来一句不是很脏的
 GET /zuan/?level=min
-Host: 127.0.0.1:8080
+Host: {{host}}
 
 ### 随便来一句脏的
 GET /zuan/?level=max
-Host: 127.0.0.1:8080
+Host: {{host}}
