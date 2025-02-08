@@ -1,9 +1,9 @@
-package wang.zihlu.zuanapi.mapper;
+package com.onixbyte.zuan.mapper;
 
 import com.mybatisflex.core.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import wang.zihlu.zuanapi.entity.Zuan;
+import com.onixbyte.zuan.entity.Zuan;
 
 /**
  * ZuanMapper
@@ -16,7 +16,7 @@ public interface ZuanMapper extends BaseMapper<Zuan> {
     @Select("""
             <script>
             select id, text, level
-              from main
+              from zuan
             <if test="level != null and level != ''">
              where level = #{level}
             </if>

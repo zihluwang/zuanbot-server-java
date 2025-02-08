@@ -1,19 +1,13 @@
-package wang.zihlu.zuanapi.controller;
+package com.onixbyte.zuan.controller;
 
-import com.mybatisflex.core.activerecord.query.OrderByBuilder;
-import com.mybatisflex.core.query.QueryWrapper;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import wang.zihlu.zuanapi.service.ZuanService;
-
-import java.util.Objects;
-
-import static wang.zihlu.zuanapi.entity.table.ZuanTableDef.ZUAN;
+import com.onixbyte.zuan.service.ZuanService;
 
 /**
  * ZuanController
@@ -21,10 +15,11 @@ import static wang.zihlu.zuanapi.entity.table.ZuanTableDef.ZUAN;
  * @author Zihlu Wang
  * @since 22 Sept, 2023
  */
-@Slf4j
 @RestController
 @RequestMapping("/zuan")
 public class ZuanController {
+
+    private static final Logger log = LoggerFactory.getLogger(ZuanController.class);
 
     private final ZuanService zuanService;
 
@@ -34,8 +29,8 @@ public class ZuanController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<String> randomOne(@RequestParam(required = false) String level) {
-        return ResponseEntity.ok(zuanService.getRandomOne(level).getText());
+    public String randomOne(@RequestParam(required = false) String level) {
+        return zuanService.getRandomOne(level).getText();
     }
 
 }

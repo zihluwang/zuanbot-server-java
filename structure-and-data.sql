@@ -1,37 +1,4 @@
-/*
- Navicat Premium Data Transfer
 
- Source Server         : Tencent Cloud CynosDB for MySQL
- Source Server Type    : MySQL
- Source Server Version : 50718 (5.7.18-cynos-log)
- Source Host           : gz-cynosdbmysql-grp-041r3ygj.sql.tencentcdb.com:24094
- Source Schema         : zuanbot
-
- Target Server Type    : MySQL
- Target Server Version : 50718 (5.7.18-cynos-log)
- File Encoding         : 65001
-
- Date: 22/09/2023 12:23:51
-*/
-
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for main
--- ----------------------------
-DROP TABLE IF EXISTS `main`;
-CREATE TABLE `main` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `text` varchar(255) NOT NULL,
-  `level` char(3) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1681 DEFAULT CHARSET=utf8mb4;
-
--- ----------------------------
--- Records of main
--- ----------------------------
-BEGIN;
 INSERT INTO `main` (`id`, `text`, `level`) VALUES (1, '你好像那懒羊羊，三千多集顶坨翔\n你好像那美羊羊，三千多集找不到娘\n你好像那沸羊羊，三千多集当备胎\n你好像那灰太狼，三千多集总想凉\n你好像那暖羊羊，三千多集瘦不了\n你好像那喜羊羊，三千多集爸妈天上飘\n你好像那小灰灰，三千多集还是个弟弟', 'max');
 INSERT INTO `main` (`id`, `text`, `level`) VALUES (2, '你应该很喜欢健身吧，看你挺会抬杠的。', 'min');
 INSERT INTO `main` (`id`, `text`, `level`) VALUES (3, '中国那么多兵器你不学，偏学剑！', 'min');
@@ -1711,6 +1678,4 @@ INSERT INTO `main` (`id`, `text`, `level`) VALUES (1677, '你长得跟个二次�
 INSERT INTO `main` (`id`, `text`, `level`) VALUES (1678, '你这么会对号入座，满大街的牢你怎么不找一个来坐？', 'min');
 INSERT INTO `main` (`id`, `text`, `level`) VALUES (1679, '对方已拒收了您的消息，还对您放了个屁', 'min');
 INSERT INTO `main` (`id`, `text`, `level`) VALUES (1680, '我不要脸，对啊，要脸做什么，送你吧，反正你又没有', 'min');
-COMMIT;
 
-SET FOREIGN_KEY_CHECKS = 1;
