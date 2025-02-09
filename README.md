@@ -1,12 +1,16 @@
-## 怎么安装？
+# 駡人寶典/祖安語錄
 
-数据库的结构和数据在 `structure-and-data.sql` 文件中，原文使用的 SQLite 在 Spring Boot 中的支持不够完善，因此改成了用 MySQL。
+## 如何安裝
 
-创建一个新的数据库，名字假定是 `zuanbot`。
+使用如下指令將數據庫導入：
 
-最后记得修改 `application.yml` 中的数据库地址、用户名和密码。
+```shell
+pg_restore -h $your_pg_host -p $your_pg_port -U $your_user -d zuan -c zuan.db.dump
+```
 
-> 本仓库改编自 repo [cndiandian/zuanbot.com](https://github.com/cndiandian/zuanbot.com)，以下是该项目的 README 原文。
+再將 `application.yml.default` 文件重命名為 `application.yml`，根據需要進行配置修改。
+
+> 本倉庫改編自 repo [cndiandian/zuanbot.com](https://github.com/cndiandian/zuanbot.com)，repo README 原文如下
 
 # 骂人宝典 / 祖安语录
 ![](https://img.shields.io/github/license/cndiandian/zuanbot.com)

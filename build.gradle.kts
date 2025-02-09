@@ -26,13 +26,13 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
-    runtimeOnly("com.mysql:mysql-connector-j")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     implementation("com.zaxxer:HikariCP")
     implementation("com.mybatis-flex:mybatis-flex-spring-boot-starter:1.10.6")
 
     implementation("org.springframework.boot:spring-boot-starter-security")
+    runtimeOnly("org.postgresql:postgresql")
 }
 
 tasks.withType<Test> {
